@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Created by: Austin Nixholm  -->
+    <meta charset="UTF-8">
+    <title>My Weather</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<h1 style="text-align: center; font-family: Calibri, serif" class="mt-3">Weather Finder</h1>
+<!-- The main content container  -->
+<div class="container mt-4" id="main">
+    <hr/>
+    <!-- Main form for zipcode & unit measurement selection -->
+    <div class="form-group row ml-5" id="mainForm">
+        <label for="zipCode" class="ml-5 mt-1">Zip Code: </label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control ml-4" id="zipCode" placeholder="Enter Zip Code" required>
+        </div>
+        <label for="unitSelection" class="ml-5 mt-1">Units: </label>
+        <div class="col-sm-4">
+            <select class="form-control ml-3" id="unitSelection">
+                <option>Imperial</option>
+                <option>Metric</option>
+            </select>
+        </div>
+        <button class="btn ml-4" id="submit">Get Weather</button>
+    </div>
+    <!-- Error element -->
+    <div id="error" class="alert alert-danger fade show" role="alert"
+         style="display: none;"></div>
+    <!-- Current conditions (hidden by default) -->
+    <div id="currentConditions" style="display:none">
+        <hr/>
+        <div class="row mt-4">
+            <h2 id="currentCondition-title">Current Conditions in |City|</h2>
+        </div>
+        <div class="row ml-1 mt-3">
+            <img id="currentCondition-icon" src="" width="64" height="64"/>
+            <div class="col-sm-3 mt-4">
+                <p id="currentCondition-description">Descriptions: NaN</p>
+            </div>
+            <div class="col-sm-3">
+                <p id="currentCondition-temperature">Temperature: NaN</p>
+                <p id="currentCondition-humidity">Humidity: NaN</p>
+                <p id="currentCondition-wind">Wind: NaN</p>
+            </div>
+        </div>
+    </div>
+    <!-- Five day forecast (hidden by default) -->
+    <div id="fiveDayForecast" style="display: none;">
+        <hr/>
+        <div class="row mt-4">
+            <h2>Five Day Forecast</h2>
+        </div>
+        <div class="row mt-2">
+            <div class="col-sm-2" id="forecast-day-one">
+                <p id="date-d1">Date</p>
+                <div class="row ml-1">
+                    <img src="" width="48" height="48" id="img-d1"/>
+                    <div class="col-sm-2">
+                        <p id="desc-d1">Clear</p>
+                    </div>
+                </div>
+                <p class="mt-1" id="highLow-d1">H NaN L NaN</p>
+            </div>
+            <div class="col-sm-2" id="forecast-day-two">
+                <p id="date-d2">Date</p>
+                <div class="row ml-1">
+                    <img src="" width="48" height="48" id="img-d2"/>
+                    <div class="col-sm-2">
+                        <p id="desc-d2">Clear</p>
+                    </div>
+                </div>
+                <p class="mt-1" id="highLow-d2">H NaN L NaN</p>
+            </div>
+            <div class="col-sm-2" id="forecast-day-three">
+                <p id="date-d3">Date</p>
+                <div class="row ml-1">
+                    <img src="" width="48" height="48" id="img-d3"/>
+                    <div class="col-sm-2">
+                        <p id="desc-d3">Clear</p>
+                    </div>
+                </div>
+                <p class="mt-1" id="highLow-d3">H NaN L NaN</p>
+            </div>
+            <div class="col-sm-2" id="forecast-day-four">
+                <p id="date-d4">Date</p>
+                <div class="row ml-1">
+                    <img src="" width="48" height="48" id="img-d4"/>
+                    <div class="col-sm-2">
+                        <p id="desc-d4">Clear</p>
+                    </div>
+                </div>
+                <p class="mt-1" id="highLow-d4">H NaN L NaN</p>
+            </div>
+            <div class="col-sm-2" id="forecast-day-five">
+                <p id="date-d5">Date</p>
+                <div class="row ml-1">
+                    <img src="" width="48" height="48" id="img-d5"/>
+                    <div class="col-sm-2">
+                        <p id="desc-d5">Clear</p>
+                    </div>
+                </div>
+                <p class="mt-1" id="highLow-d5">H NaN L NaN</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Footer forced to bottom -->
+<footer class="fixed-bottom container text-center">
+    <hr/>
+    <p style="font-size: 10px;">Austin Nixholm &copy; 2019 All rights reserved.</p>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
